@@ -1,5 +1,5 @@
 #! python3
-# NaxosFormat.py - downloads Merlin files from the web
+# NaxosFormat.py - downloads Naxos and formats the sheets of the file
 import os, re, shutil, pandas as pd, datetime as dt, time, openpyxl as xl, xlrd, calendar as cal
 
 fileDate = input('Please add the file date:')
@@ -7,7 +7,7 @@ year = fileDate[:4]
 month = fileDate[5:7]
 currFolder = year + '-' + month
 
-filePath = os.path.abspath(r'\\cmgfs\Shared\Accounting\Consignment Sales\Naxos\{year}\{folder}'.format(year = year, 
+filePath = os.path.abspath(r'\\Naxos\{year}\{folder}'.format(year = year, 
 folder = currFolder))
 fileList = os.listdir(filePath)
 
